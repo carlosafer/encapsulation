@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Product {
 
-	public String name;
-	public double price;
-	public int quantity;
+	private String name;
+	private double price;
+	private int quantity;
 
 	List<Product> list = new ArrayList<>();
 	
@@ -20,16 +20,35 @@ public class Product {
 		this.quantity = quantity;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
 	public double subtotal() {
 		return quantity * price;
 	}
 
 	public String toString() {
-				return "Product: " + name + " - price: $"
-				+ String.format("%.2f", price)
-				+ "\n - subtotal: $"
+				return "Product: " + getName() + " - price: $"
+				+ String.format("%.2f", getPrice())
+				+ "\nSubtotal: $"
 				+ String.format("%.2f", subtotal()) + "\n";
 	}
-	
 	
 }

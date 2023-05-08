@@ -29,6 +29,7 @@ public class Program {
 			int quantity = input.nextInt();
 			list.add(new Product(name, price, quantity));
 		}		
+		
 		System.out.println("-----PRODUCTS LIST-----");
 		list.forEach(System.out::print);
 		
